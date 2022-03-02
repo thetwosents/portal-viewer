@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000 !important;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-size: .75rem !important;
+  line-height: 1.5;
+  text-transform: none !important;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.global-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  /* display: none; */
+}
+
+.global-bg-video video {
+  width: 200%;
+  position: absolute;
+  top: 20%;
+  left: -50%;
+}
+
+.panels {
+  height: 50vh !important;
+}
+
+/* .view-controls {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 6vh;
+  background-color: #ccc;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* a variable for background color */
+
+.view-controls {
+  z-index: 5;
+  background: rgba(0,0,0,.6);
+  color: #fff;
+  width: 100vw;
+  overflow: hidden;
+  height: 50px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: top;
+  transition: all .35s ease-out;
+  -webkit-transition: all .35s ease-out;
+  z-index: 9999;
+}
+.ant-table-thead {
+  border: 0px !important;
+}
+
+.view-controls .ant-table-thead > tr > th {
+  background: transparent;
+}
+
+.view-controls .ant-table-thead > tr > th {
+  color: #fff;
+  background: transparent;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.leaderboard-level-guild img {
+  border-radius: 50%  ;
+}
+
+.ant-table {
+  background: transparent !important;
+}
+
+.ant-table tr {
+  background: transparent
+}
+
+.ant-table tr:hover {
+  background: transparent !important;
+}
+
+.ant-table tr:hover td {
+  background: transparent !important;
+}
+
+.ant-table tr td {
+  color: #fff !important
+}
+
+.view-controls {
+
+}
+
+.ant-tabs-nav {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0px 20px;
+  margin-bottom: 0px !important;
+}
+
+.view-controls:hover {
+  height: 500px;
+}
+
+.view-controls .menu {
+  width: 100%;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.panel {
+  height: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  /* padding: 8px 20px; */
+}
+
+.full-width {
+  width: 100%;
+}
+.tcg-viewer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.portal-title {
+  color: #fff;
+}
