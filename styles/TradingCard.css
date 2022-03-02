@@ -1,0 +1,462 @@
+/* Sets up the card text */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap");
+
+.trading-card * {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.trading-card .asset {
+  display: flex;
+  margin: 0 auto;
+  /* Gradient background with blue pink and purple that is animated with loop */
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+    z-index: 8;
+  transition: all 0.2s ease-in-out;
+  height: 400px;
+  width: 800px;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.trading-card .asset:hover {
+  transform: scale(1.05);
+}
+
+.trading-card .asset::after {
+  content: "";
+  position: "absolute";
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  /* background: #fff; */
+}
+
+/* Contains everything */
+.card-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+}
+.card-.container:hover {
+  box-shadow: 0px 12px 64px 24px rgba(0, 0, 0, 0.2);
+}
+.card-.container:after {
+  content: "";
+  display: block;
+  padding-top: 698px;
+}
+
+/* Outlines the card & sets up realistic box shadow */
+.card_frame {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 15px;
+  background-color: #f2f2f2;
+  background-image: linear-gradient(to top, #222, #222 70%, #333);
+  box-shadow: 0 2.5px 2.5px rgba(0, 0, 0, 0.5);
+}
+
+/* Creates card body based on background image */
+.card_body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 26px;
+  background-image: url(https://cdn.wallpapersafari.com/0/25/GZTr6h.jpg);
+  background-size: cover;
+  z-index: 1;
+}
+
+/* Sets up name nicely */
+.trading-card .card_head {
+  padding: 0 5.1%;
+  color: #fff !important;
+}
+/* Pulls the image into the card */
+.card_main {
+  position: relative;
+  height: 72px;
+}
+
+.trading-card h5 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 0;
+  font-size: 4px !important;
+  color: pink;
+  text-transform: uppercase;
+}
+.type {
+  color: #fff;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.trading-card .type p {
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-size: 4px !important;
+  text-align: center;
+}
+.trading-card .name {
+  margin-top: -0.000001%;
+  padding-top: 0;
+  font-size: 23px;
+  margin-bottom: -9%;
+  padding-bottom: 0;
+  color: #fff;
+}
+
+/* Sets up the HP */
+.health {
+  text-align: right;
+  float: right;
+  bottom: 3%;
+  letter-spacing: -0.05em;
+  font-size: 22px;
+  color: #ffffff;
+  text-shadow: 0 0 0.05em rgba(255, 0, 0, 0.15);
+  transform: scale(0.92, 1);
+  transform-origin: right;
+}
+.right {
+  text-align: right;
+}
+/* Set up the fire type image */
+.fire_type {
+  align: right;
+  border-radius: 100px;
+  width: 31px;
+  height: 31px;
+  margin-bottom: -4.5px;
+}
+
+/* Sets up image frame */
+.img_frame {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  margin-bottom: 8.977px;
+  background-image: linear-gradient(45deg, #555, #222, #555, #333, #222, #555);
+  box-shadow: 5px 5px 12px 2px rgba(0, 0, 0, 0.75);
+}
+.img_frame:after,
+.img_frame:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 3.5%;
+  width: 5%;
+}
+.img_frame:before {
+  left: 1.2%;
+  background: linear-gradient(to right, rgba(170, 96, 7, 0.5), transparent);
+  transform: skew(45deg);
+}
+.img_frame:after {
+  right: 1.2%;
+  background: linear-gradient(to left, rgba(170, 96, 7, 0.5), transparent);
+  transform: skew(-45deg);
+}
+
+/* Sets up the look of the pokemon image being used */
+.poke_img {
+  position: absolute;
+  width: 95%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 2.388%;
+  background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/601220/e3245d54b4dee90e35e61330c9d97145605d3265.jpg);
+  background-size: cover;
+}
+
+/* Makes the frame around the image look fancier */
+.poke_img:after,
+.poke_img:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3.6%;
+  height: 3.3%;
+  width: 23%;
+}
+.poke_img:before {
+  left: -2%;
+  background: linear-gradient(to right, rgba(170, 96, 7, 0.5), transparent);
+  transform: skew(-45deg);
+}
+.poke_img:after {
+  right: -2%;
+  background: linear-gradient(to left, rgba(170, 96, 7, 0.5), transparent);
+  transform: skew(45deg);
+}
+
+/* Creates the gold banner behind pokemon facts */
+.poke_facts {
+  position: relative;
+  display: none;
+  height: 26px;
+  margin: 0 19px;
+  color: #000;
+  text-align: center;
+  background-image: linear-gradient(
+    to top,
+    #555,
+    #555 10%,
+    #555 80%,
+    #555 100%
+  );
+}
+.poke_facts:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0.3% 0 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #333 2%,
+    #555,
+    #777,
+    #333,
+    #222 98%,
+    transparent
+  );
+}
+.poke_facts > span {
+  position: relative;
+  bottom: 0.1em;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.022em;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+/* Sets up the pokemon's attack box */
+.single_energy_type {
+  float: left;
+  border-radius: 100px;
+  width: 25px;
+  height: 25px;
+  margin-left: 7.5%;
+  margin-right: 30%;
+  margin-bottom: -4.5px;
+}
+
+.single_energy_type1 {
+  border-radius: 100px;
+  width: 25px;
+  height: 25px;
+  margin-top: 2.5%;
+  margin-left: 30%;
+}
+.multi_energy_type1 {
+  float: left;
+  border-radius: 100px;
+  width: 25px;
+  height: 25px;
+  margin-top: 4%;
+  margin-left: 5%;
+}
+.multi_energy_type2 {
+  float: left;
+  border-radius: 100px;
+  width: 25px;
+  height: 25px;
+  margin-top: 4%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.multi_energy_type3 {
+  border-radius: 100px;
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  margin-bottom: -1%;
+}
+
+.text_indent {
+  margin-left: 0%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.atk_damage1 {
+  float: right;
+  margin-top: -10%;
+  margin-right: 5%;
+  margin-left: -15%;
+  padding: 0;
+  font-weight: normal;
+}
+
+.atk_damage2 {
+  float: right;
+  margin-top: -15%;
+  margin-right: 5%;
+  margin-left: -15%;
+  padding: 0;
+  font-weight: normal;
+}
+
+.hr_1 {
+  color: black;
+  background-color: black;
+  height: 1px;
+  width: 90%;
+}
+
+.trading-card h3 {
+  max-width: 80%;
+  margin: 30px auto;
+  text-align: center;
+  color: #fff;
+  text-shadow: 3px;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.hr_2 {
+  color: black;
+  background-color: black;
+  height: 1px;
+  width: 90%;
+  margin-top: -2.5%;
+  margin-bottom: 0;
+}
+
+.attack_text {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Sets up Weakness */
+.weakness {
+  float: left;
+  margin-top: -3%;
+  margin-left: 10%;
+}
+/* Sets up Resistance */
+.resistance {
+  float: left;
+  margin-top: -3%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+/* Sets up Retreat Cost */
+.retreat_cost {
+  float: left;
+  margin-top: -3%;
+}
+
+/* Sets up the pokemon description box */
+.poke_description {
+  position: absolute;
+  bottom: 13px;
+  left: 19px;
+  width: 386px;
+  height: 38px;
+  z-index: 1;
+}
+.poke_description:before,
+.poke_description:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  left: 0;
+  right: 0;
+}
+.poke_description:before {
+  top: 0;
+  background: linear-gradient(
+    to right,
+    #ffd234,
+    #ffef64,
+    #f8d130,
+    #efb303,
+    #a36009
+  );
+}
+.poke_description:after {
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    #a36009,
+    #efb303,
+    #f8d130,
+    #ffef64,
+    #ffd234
+  );
+}
+.poke_description_frame:before,
+.poke_description_frame:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+}
+.poke_description_frame:before {
+  left: 0;
+  background: linear-gradient(to top, #a07700, #b08409);
+}
+.poke_description_frame:after {
+  right: 0;
+  background: linear-gradient(to bottom, #a07700, #b08409);
+}
+.poke_description_text {
+  padding: 6px 12px;
+  font-size: 13.75px;
+  font-weight: 700;
+  letter-spacing: 0.022em;
+  font-style: italic;
+  line-height: 1;
+  display: block;
+}
+
+.trading-card p {
+  margin-top: 0%;
+}
+
+/* Copywrite info */
+.copyinfo {
+  margin-top: 9%;
+  margin-left: 2%;
+  float: left;
+  font-size: 0.5em;
+}
