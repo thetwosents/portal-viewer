@@ -14,7 +14,7 @@ const portals = [
     },
     "image": "https://i.natgeofe.com/k/f027ff62-8d64-49eb-8fb4-4bb79cf86166/redwood-forest_16x9.jpg?w=1200",
     "url": "https://google.com",
-    "videoUrl": '/abstract.mp4',
+    "videoUrl": '/island.mp4',
   },
   {
     "id": 2,
@@ -31,7 +31,7 @@ const portals = [
     "description": "A Metaverse dedicated to Trading Card Games",
     "image": "https://www.nps.gov/subjects/glaciers/images/KEFJ_Bear_Glacier_NPS_Photo_crop.jpg",
     "url": "https://google.com",
-    "videoUrl": 'https://vod-progressive.akamaized.net/exp=1646164410~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2358%2F26%2F661794954%2F3042974316.mp4~hmac=900b29a971561eda3495aa3a9b4cf4eb15fa3f36a681dce1f3a091a9c9738e97/vimeo-prod-skyfire-std-us/01/2358/26/661794954/3042974316.mp4',
+    "videoUrl": '/colosseum.mp4',
   }
 ]
 
